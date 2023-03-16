@@ -1,15 +1,44 @@
 /*style pour carrousel*/
 .carrousel {
   position: fixed;
-  width: 450px;
-  height: 650px;
-  top: 10%;
-  left: calc(50% - 225px);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  /*     width: 450px;
+      height: 650px;
+      top: 10%;
+      left: calc(50% - 225px); */
   transform: scale(0);
   transition: transform 0.5s;
   z-index: 1;
 }
+@media screen and (min-width: 500px) {
+  .carrousel {
+    width: 450px;
+    height: 650px;
+    top: 10%;
+    left: calc(50% - 225px);
+  }
+}
 
+/* .carrousel{
+    position: fixed;
+    width: 100vw;
+    height : 100vh;
+    top : 0;
+    left: 0;
+    transform: scale(0);
+    transition : transform .5s;
+    background-color: aquamarine;
+    @media screen and (min-width: 500px) {
+        width: 50%;
+        height : 50%;
+        top : 25%;
+        left: 25%;
+    }
+
+} */
 .bouton__x {
   position: absolute;
   top: 10px;
@@ -54,4 +83,23 @@
   height: 30px;
   display: flex;
   justify-content: center;
+}
+
+.carrousel__bouton__precedent,
+.carrousel__bouton__suivant {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  transform: translateY(-50%);
+}
+
+.carrousel__bouton__precedent {
+  left: 0;
+}
+
+.carrousel__bouton__suivant {
+  right: 0;
 }/*# sourceMappingURL=style.css.map */
